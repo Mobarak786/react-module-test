@@ -12,3 +12,5 @@
 
 [X] create the folder structure according to the app required
 [X] push your code by commiting "created app folder structure"
+[X] create mainpage design
+[X] push code by commiting "mainpage design created"
