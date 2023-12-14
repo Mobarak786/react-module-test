@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Notes.module.css";
+import { Trim1Letter, Trim2Letters } from "../../functions";
 
-const Notes = () => {
+const Notes = ({ colour, name }) => {
   return (
     <div className={styles.note}>
-      <div>MN</div>
-      <h3>My Notes</h3>
+      <div style={{ backgroundColor: colour }}>
+        {name.split(" ").length > 1 ? Trim2Letters(name) : Trim1Letter(name)}
+      </div>
+      <h3>{name}</h3>
     </div>
   );
 };

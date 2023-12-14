@@ -12,5 +12,5 @@ input {
   border: none;
 }
 input:focus {
-  border: none;
+  outline: none;
 }
