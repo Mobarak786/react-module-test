@@ -16,7 +16,8 @@
   align-items: center;
 }
 .app_title h1 {
-  font-size: clamp(28px, 3vw, 35px);
+  font-size: clamp(32px, 3vw, 35px);
+  text-align: center;
   font-weight: 500;
   line-height: 41px;
   letter-spacing: 0.02em;
@@ -53,15 +54,16 @@
   align-items: center;
 }
 .popup_body {
+  position: absolute;
   background: rgba(177, 173, 173, 0.7);
   width: 100vw;
   height: 100vh;
-  position: absolute;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 11;
 }
 .section_2 {
   width: 75%;
@@ -72,11 +74,12 @@
   align-items: center;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .section_1 {
     width: 100vw;
   }
   .section_2 {
     width: 100vw;
+    display: none;
   }
 }

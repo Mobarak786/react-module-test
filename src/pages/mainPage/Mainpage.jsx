@@ -16,11 +16,13 @@ const Mainpage = () => {
     JSON.parse(localStorage.getItem("note-list")) || []
   );
   const [noteHeader, setNoteHeader] = useState("");
-  //returns true when screen size reaches <=420px for mobile device
+
+  //returns true when screen size reaches <=450px for mobile device
   const screenSize = useIsMobile();
-  console.log(screenSize);
+
   // hide the modal on click outside of it..
   const popupRef = useRef(null);
+
   useEffect(() => {
     window.onclick = (e) => {
       if (e.target === popupRef.current) {
@@ -43,7 +45,8 @@ const Mainpage = () => {
     setNoteHeader(() => item);
     setHide(true);
   };
-
+  console.log(hide);
+  console.log(screenSize);
   return (
     <div className={styles.container}>
       <div
@@ -74,16 +77,7 @@ const Mainpage = () => {
         </button>
       </div>
 
-      <div
-        className={styles.section_2}
-        style={
-          screenSize
-            ? hide
-              ? { display: "flex" }
-              : { display: "none" }
-            : { display: "flex" }
-        }
-      >
+      <div className={styles.section_2} style={hide ? { display: "flex" } : {}}>
         {noteHeader ? (
           <NoteBody
             name={noteHeader.noteName}

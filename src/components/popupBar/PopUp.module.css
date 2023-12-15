@@ -27,7 +27,7 @@
 }
 .name_input input {
   width: 65%;
-  height: 45px;
+  height: clamp(35px, 5vw, 45px);
   padding-left: 20px;
   border-radius: 22px;
   border: 2px solid rgba(204, 204, 204, 1);
@@ -51,7 +51,11 @@
   letter-spacing: 0.035em;
   text-align: left;
 }
-
+.colour_input div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .colour_input div button {
   width: clamp(20px, 3vw, 40px);
   height: clamp(20px, 3vw, 40px);
@@ -69,6 +73,9 @@
   justify-content: right;
 }
 .button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 130px;
   height: 30px;
   border-radius: 11px;
@@ -79,5 +86,11 @@
   letter-spacing: 0.035em;
   text-align: center;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
+  .button {
+    justify-content: center;
+  }
+  .button button {
+    width: 150px;
+  }
 }

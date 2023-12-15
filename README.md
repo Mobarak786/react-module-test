@@ -14,3 +14,4 @@
 [X] push your code by commiting "created app folder structure"
 [X] create mainpage design
 [X] push code by commiting "mainpage design created"
+[X] AFTER completing all your logics push code by commiting "app is completed"
