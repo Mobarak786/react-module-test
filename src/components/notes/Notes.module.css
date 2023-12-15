@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(23px, 4vw, 24px);
   font-weight: 500;
   line-height: 23px;
   letter-spacing: 0.02em;

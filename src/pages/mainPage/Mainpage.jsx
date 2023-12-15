@@ -22,11 +22,12 @@ const Mainpage = () => {
 
   // hide the modal on click outside of it..
   const popupRef = useRef(null);
-
   useEffect(() => {
     window.onclick = (e) => {
       if (e.target === popupRef.current) {
         setShowPopup(false);
+        setNoteName("");
+        setColourCode("");
       }
     };
   }, []);
@@ -82,6 +83,8 @@ const Mainpage = () => {
           <Banner />
         )}
       </div>
+
+      {/* popup */}
       <div
         ref={popupRef}
         className={styles.popup_body}

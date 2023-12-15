@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./NoteBody.module.css";
+
+import NoteContent from "./NoteContent";
+
 import sendBtn from "../../assets/icons/sendButton.png";
 import sendBtnblue from "../../assets/icons/sendButtonblue.png";
 import back from "../../assets/icons/back.png";
@@ -10,7 +13,6 @@ import {
   calculateDate,
   calculateTime,
 } from "../../functions";
-import NoteContent from "./NoteContent";
 
 const NoteBody = ({ name, colour, id, setHide }) => {
   const [isText, setIsText] = useState(false);
