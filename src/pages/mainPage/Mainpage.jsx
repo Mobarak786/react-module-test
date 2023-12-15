@@ -45,18 +45,13 @@ const Mainpage = () => {
     setNoteHeader(() => item);
     setHide(true);
   };
+  console.log(screenSize);
 
   return (
     <div className={styles.container}>
       <div
         className={styles.section_1}
-        style={
-          screenSize
-            ? hide
-              ? { display: "none" }
-              : { display: "block" }
-            : { display: "block" }
-        }
+        style={screenSize && hide ? { display: "none" } : { display: "block" }}
       >
         <div className={styles.app_title}>
           <h1>Pocket Notes</h1>
