@@ -45,8 +45,7 @@ const Mainpage = () => {
     setNoteHeader(() => item);
     setHide(true);
   };
-  console.log(hide);
-  console.log(screenSize);
+
   return (
     <div className={styles.container}>
       <div
